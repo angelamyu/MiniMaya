@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="StarterCode">
+    <file>extrude_clicked.png</file>
+    <file>extrude_unclicked.png</file>
+    <file>subdivide_clicked.png</file>
+    <file>subdivide_unclicked.png</file>
+    <file>icon.png</file>
+    <file>delete_clicked.png</file>
+    <file>delete_unclicked.png</file>
+    <file>edge_clicked.png</file>
+    <file>edge_unclicked.png</file>
+    <file>split_clicked.png</file>
+    <file>split_unclicked.png</file>
+    <file>vertex_clicked.png</file>
+    <file>vertex_unclicked.png</file>
+    <file>rotate_clicked.png</file>
+    <file>rotate_unclicked.png</file>
+    <file>stop_clicked.png</file>
+    <file>stop_unclicked.png</file>
+  </qresource>
+</RCC>

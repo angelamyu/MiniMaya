@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>doc</class>
+ <widget class="QDialog" name="doc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>649</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Documentation</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>611</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>Visualizer -- Angela Yu: 
+
+Camera is implemented using a spherical camera and is controlled by clicking and 
+ dragging your mouse around. 
+
+Move a reference point by typing 3 ints separated by only commas in the box next
+ to Set Ref Point and then click said button. 
+Snap view: selected a face, vertex, or halfedge, and then right click and choose
+ snap view from the little list. 
+Reset camera: right click in the viewing window and then click reset camera. This
+ also resets your saved views (aka, removes them). 
+Named views: go to a named view by right clicking (?) and selecting the named view
+ you wish the camera to be in
+Saving your own views: In the textbox next to the save camera button, type in 
+ a string to name your view. Then hit the save camera button. This will save
+ the camera and store it in the nearby list. 
+
+You can pick edges, faces, and vertices. Move your mouse around, and when you 
+ highlight a region that represents one of these structures, it will outline
+ the region in red. Faces are completely outlined. Generally, edges are   
+
+ represented as rectangle looking shapes and vertices are represented as  
+
+ triangles. Click on these, the outline will become white and you can
+ do things like change face colors and move vertices (using the x,y,z   
+
+sliders). 
+You can also pick the cubes in the lattice of .OBJ's if you turn the feature on. 
+ When you click said cube, it'll turn white and you can move these cubes  
+
+ around. Nonselected cubes are a blue-ish color. 
+Picking faces work on both planar and nonplanar faces.
+
+Load shaders by inputting a string into the box near the Load Shader button and 
+ clicking said button. Make sure the string you enter in is the part before
+ &quot;Frag.frag&quot; and &quot;Vert.vert&quot; of the shader files and that these files are in
+ the project folder. Ex. type in &quot;diffuseTest&quot; in order to load   
+
+&quot;diffuseTestFrag.frag&quot; and &quot;diffuseTestVert.vert&quot;. 
+
+Materials are handled and are passed to the shader as lambert shading. Nothing   
+
+fancy. Default material is white colored if the material is not found in   
+
+the project folder. You can test this by loading the test.obj and you'll   
+
+notice some faces are red now. 
+
+Move light source: Move light source to a location by clicking on lighting in the 
+ menubar at the top. Then select Change Light Position. In the window that  
+
+ pops up, type in three floats that are separated by only one comma. This  
+
+ will change the light position to that spot.
+
+</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>611</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>Deformer -- Di Mu:
+
+Guide:
+Load Mesh: In the menu, click on load, and choose a file to load an OBJ file.
+Save Mesh: In the menu, click on save, and input filename to save an OBJ file.
+Draw bounding box: input dimension at left-bottom, and click on “show box” button to show the bounding box, and click on the “hide box” button to disable the bounding box. 
+Twist the object (implemented using FFD):  Click on the twist.
+Taper the object (implemented using FFD):  Click on the taper.
+
+Difficulties:
+	I didn’t realize that the global twist doesn’t require FFD until last moment, but I don’t have time to change it. I changed the control point positions and then used the Bezier interpolate formula to calculate the vertices of the deformed object. 
+</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>611</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>Geometer – Ana Mei:
+Responsible for creating user interface to the polygon meshes. User interactions include context menus and dialog box messages. For example, to change a color of the face, the mouse has to select a face first before right-clicking in order to get such options to show up. 
+-	Camera functions can be found by right-clicking within the screen but not selecting anything from the cube
+-	Color and Snap View only appears when a face is selected
+-	Edit Mesh functions can be accessed by the buttons above or the file menu.
+-	Can load and save files from the file menu
+-	The deformation tab widget contains the deforming functions such as bounding box and FFDs
+Polygon Mesh Operations:
+1.	Insert vertex into an edge: must select a halfedge  first before performing this operation.
+2.	Delete vertex: choose a halfedge and press the button called delete vertex.
+3.	Select a vertex and translate in the X,Y,Z direction
+4.	Insert edge by selecting two halfedges. These two halfedges must have a vertex in common.
+5.	Split Quad: split a quad into two triangles. 
+Catmull-Clark Subdivision:
+-	Able to smooth both the handmade cube and loaded obj file. It has a progress bar to inform the user that the program is still running when dealing with high polygon count.
+</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
